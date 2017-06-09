@@ -1,0 +1,2 @@
+class Linha < ApplicationRecord
+end

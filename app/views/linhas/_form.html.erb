@@ -1,0 +1,37 @@
+<%= form_with(model: linha, local: true) do |form| %>
+  <% if linha.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(linha.errors.count, "error") %> prohibited this linha from being saved:</h2>
+
+      <ul>
+      <% linha.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :numero_paradas %>
+    <%= form.number_field :numero_paradas, id: :linha_numero_paradas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :passageiros_atendidos %>
+    <%= form.number_field :passageiros_atendidos, id: :linha_passageiros_atendidos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qtd_onibus %>
+    <%= form.number_field :qtd_onibus, id: :linha_qtd_onibus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :preco %>
+    <%= form.text_field :preco, id: :linha_preco %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

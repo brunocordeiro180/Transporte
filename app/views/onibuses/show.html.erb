@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data fabricacao:</strong>
+  <%= @onibus.data_fabricacao %>
+</p>
+
+<p>
+  <strong>Qtd passageiros:</strong>
+  <%= @onibus.qtd_passageiros %>
+</p>
+
+<p>
+  <strong>Ultima revisao:</strong>
+  <%= @onibus.ultima_revisao %>
+</p>
+
+<p>
+  <strong>Empresa:</strong>
+  <%= @onibus.empresa %>
+</p>
+
+<p>
+  <strong>Linha:</strong>
+  <%= @onibus.linha %>
+</p>
+
+<%= link_to 'Edit', edit_onibus_path(@onibus) %> |
+<%= link_to 'Back', onibuses_path %>

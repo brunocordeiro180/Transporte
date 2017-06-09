@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cpf: 1
+  datanasc: 2017-06-09
+  profissao: MyText
+  endereco: MyText
+  sexo: MyString
+
+two:
+  cpf: 1
+  datanasc: 2017-06-09
+  profissao: MyText
+  endereco: MyText
+  sexo: MyString

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cartao:</strong>
+  <%= @linha_cartao.cartao %>
+</p>
+
+<p>
+  <strong>Linha:</strong>
+  <%= @linha_cartao.linha %>
+</p>
+
+<%= link_to 'Edit', edit_linha_cartao_path(@linha_cartao) %> |
+<%= link_to 'Back', linha_cartaos_path %>

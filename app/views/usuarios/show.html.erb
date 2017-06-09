@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @usuario.cpf %>
+</p>
+
+<p>
+  <strong>Datanasc:</strong>
+  <%= @usuario.datanasc %>
+</p>
+
+<p>
+  <strong>Profissao:</strong>
+  <%= @usuario.profissao %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @usuario.endereco %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @usuario.sexo %>
+</p>
+
+<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
+<%= link_to 'Back', usuarios_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyText
+  qtd_habitantes: 1
+  area: 1
+  qtd_estacoes: 1
+
+two:
+  nome: MyText
+  qtd_habitantes: 1
+  area: 1
+  qtd_estacoes: 1

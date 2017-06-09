@@ -1,0 +1,27 @@
+<%= form_with(model: linha_cartao, local: true) do |form| %>
+  <% if linha_cartao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(linha_cartao.errors.count, "error") %> prohibited this linha_cartao from being saved:</h2>
+
+      <ul>
+      <% linha_cartao.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cartao_id %>
+    <%= form.text_field :cartao_id, id: :linha_cartao_cartao_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :linha_id %>
+    <%= form.text_field :linha_id, id: :linha_cartao_linha_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

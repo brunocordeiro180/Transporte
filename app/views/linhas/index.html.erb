@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Linhas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numero paradas</th>
+      <th>Passageiros atendidos</th>
+      <th>Qtd onibus</th>
+      <th>Preco</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @linhas.each do |linha| %>
+      <tr>
+        <td><%= linha.numero_paradas %></td>
+        <td><%= linha.passageiros_atendidos %></td>
+        <td><%= linha.qtd_onibus %></td>
+        <td><%= linha.preco %></td>
+        <td><%= link_to 'Show', linha %></td>
+        <td><%= link_to 'Edit', edit_linha_path(linha) %></td>
+        <td><%= link_to 'Destroy', linha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Linha', new_linha_path %>

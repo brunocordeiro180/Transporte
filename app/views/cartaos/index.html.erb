@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cartaos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Saldo</th>
+      <th>Data cadastro</th>
+      <th>Data vencimento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cartaos.each do |cartao| %>
+      <tr>
+        <td><%= cartao.usuario.cpf %></td>
+        <td><%= cartao.saldo %></td>
+        <td><%= cartao.data_cadastro %></td>
+        <td><%= cartao.data_vencimento %></td>
+        <td><%= link_to 'Show', cartao %></td>
+        <td><%= link_to 'Edit', edit_cartao_path(cartao) %></td>
+        <td><%= link_to 'Destroy', cartao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cartao', new_cartao_path %>

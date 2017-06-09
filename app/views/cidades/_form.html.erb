@@ -1,0 +1,37 @@
+<%= form_with(model: cidade, local: true) do |form| %>
+  <% if cidade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cidade.errors.count, "error") %> prohibited this cidade from being saved:</h2>
+
+      <ul>
+      <% cidade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_area :nome, id: :cidade_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qtd_habitantes %>
+    <%= form.number_field :qtd_habitantes, id: :cidade_qtd_habitantes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :area %>
+    <%= form.number_field :area, id: :cidade_area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qtd_estacoes %>
+    <%= form.number_field :qtd_estacoes, id: :cidade_qtd_estacoes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

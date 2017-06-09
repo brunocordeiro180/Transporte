@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @cidade.nome %>
+</p>
+
+<p>
+  <strong>Qtd habitantes:</strong>
+  <%= @cidade.qtd_habitantes %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @cidade.area %>
+</p>
+
+<p>
+  <strong>Qtd estacoes:</strong>
+  <%= @cidade.qtd_estacoes %>
+</p>
+
+<%= link_to 'Edit', edit_cidade_path(@cidade) %> |
+<%= link_to 'Back', cidades_path %>

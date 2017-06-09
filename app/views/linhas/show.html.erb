@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numero paradas:</strong>
+  <%= @linha.numero_paradas %>
+</p>
+
+<p>
+  <strong>Passageiros atendidos:</strong>
+  <%= @linha.passageiros_atendidos %>
+</p>
+
+<p>
+  <strong>Qtd onibus:</strong>
+  <%= @linha.qtd_onibus %>
+</p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @linha.preco %>
+</p>
+
+<%= link_to 'Edit', edit_linha_path(@linha) %> |
+<%= link_to 'Back', linhas_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero_paradas: 1
+  passageiros_atendidos: 1
+  qtd_onibus: 1
+  preco: 1.5
+
+two:
+  numero_paradas: 1
+  passageiros_atendidos: 1
+  qtd_onibus: 1
+  preco: 1.5

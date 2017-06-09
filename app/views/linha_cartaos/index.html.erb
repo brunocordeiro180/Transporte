@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Linha Cartaos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cartao</th>
+      <th>Linha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @linha_cartaos.each do |linha_cartao| %>
+      <tr>
+        <td><%= linha_cartao.cartao %></td>
+        <td><%= linha_cartao.linha %></td>
+        <td><%= link_to 'Show', linha_cartao %></td>
+        <td><%= link_to 'Edit', edit_linha_cartao_path(linha_cartao) %></td>
+        <td><%= link_to 'Destroy', linha_cartao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Linha Cartao', new_linha_cartao_path %>

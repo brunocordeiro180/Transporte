@@ -1,0 +1,37 @@
+<%= form_with(model: cartao, local: true) do |form| %>
+  <% if cartao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cartao.errors.count, "error") %> prohibited this cartao from being saved:</h2>
+
+      <ul>
+      <% cartao.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :usuario_id %>
+    <%= form.text_field :usuario_id, id: :cartao_usuario_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :saldo %>
+    <%= form.text_field :saldo, id: :cartao_saldo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_cadastro %>
+    <%= form.date_select :data_cadastro, id: :cartao_data_cadastro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_vencimento %>
+    <%= form.date_select :data_vencimento, id: :cartao_data_vencimento %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
