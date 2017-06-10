@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Estacaos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cidade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @estacaos.each do |estacao| %>
+      <tr>
+        <td><%= estacao.nome %></td>
+        <td><%= estacao.cidade %></td>
+        <td><%= link_to 'Show', estacao %></td>
+        <td><%= link_to 'Edit', edit_estacao_path(estacao) %></td>
+        <td><%= link_to 'Destroy', estacao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Estacao', new_estacao_path %>

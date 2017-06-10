@@ -1,0 +1,27 @@
+<%= form_with(model: estacao, local: true) do |form| %>
+  <% if estacao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(estacao.errors.count, "error") %> prohibited this estacao from being saved:</h2>
+
+      <ul>
+      <% estacao.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :estacao_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cidade_id %>
+    <%= form.text_field :cidade_id, id: :estacao_cidade_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

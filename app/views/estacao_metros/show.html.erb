@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @estacao_metro.nome %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @estacao_metro.cidade %>
+</p>
+
+<%= link_to 'Edit', edit_estacao_metro_path(@estacao_metro) %> |
+<%= link_to 'Back', estacao_metros_path %>

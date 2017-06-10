@@ -1,0 +1,32 @@
+<%= form_with(model: itinerario_metro, local: true) do |form| %>
+  <% if itinerario_metro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(itinerario_metro.errors.count, "error") %> prohibited this itinerario_metro from being saved:</h2>
+
+      <ul>
+      <% itinerario_metro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :estacao_metro_id %>
+    <%= form.text_field :estacao_metro_id, id: :itinerario_metro_estacao_metro_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :linha_metro_id %>
+    <%= form.text_field :linha_metro_id, id: :itinerario_metro_linha_metro_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ordem %>
+    <%= form.number_field :ordem, id: :itinerario_metro_ordem %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

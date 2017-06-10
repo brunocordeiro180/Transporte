@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numero paradas:</strong>
+  <%= @linha_metro.numero_paradas %>
+</p>
+
+<p>
+  <strong>Cor:</strong>
+  <%= @linha_metro.cor %>
+</p>
+
+<p>
+  <strong>Passageiros atendidos:</strong>
+  <%= @linha_metro.passageiros_atendidos %>
+</p>
+
+<p>
+  <strong>Qtd trans:</strong>
+  <%= @linha_metro.qtd_trans %>
+</p>
+
+<%= link_to 'Edit', edit_linha_metro_path(@linha_metro) %> |
+<%= link_to 'Back', linha_metros_path %>

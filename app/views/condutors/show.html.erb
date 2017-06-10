@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @condutor.cpf %>
+</p>
+
+<p>
+  <strong>Onibus:</strong>
+  <%= @condutor.onibus %>
+</p>
+
+<p>
+  <strong>Salario:</strong>
+  <%= @condutor.salario %>
+</p>
+
+<p>
+  <strong>Data inicio serv:</strong>
+  <%= @condutor.data_inicio_serv %>
+</p>
+
+<p>
+  <strong>Datanasc:</strong>
+  <%= @condutor.datanasc %>
+</p>
+
+<p>
+  <strong>Empresa:</strong>
+  <%= @condutor.empresa %>
+</p>
+
+<%= link_to 'Edit', edit_condutor_path(@condutor) %> |
+<%= link_to 'Back', condutors_path %>

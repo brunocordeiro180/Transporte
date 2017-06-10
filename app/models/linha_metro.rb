@@ -1,0 +1,2 @@
+class LinhaMetro < ApplicationRecord
+end

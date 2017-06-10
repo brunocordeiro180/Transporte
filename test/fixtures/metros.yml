@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  linha_metro: one
+  empresa: one
+  qtd_passageiros: 1
+  data_inicio_operacao: 2017-06-09
+  ultima_revisao: 2017-06-09
+
+two:
+  linha_metro: two
+  empresa: two
+  qtd_passageiros: 1
+  data_inicio_operacao: 2017-06-09
+  ultima_revisao: 2017-06-09

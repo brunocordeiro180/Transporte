@@ -1,0 +1,47 @@
+<%= form_with(model: condutor, local: true) do |form| %>
+  <% if condutor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(condutor.errors.count, "error") %> prohibited this condutor from being saved:</h2>
+
+      <ul>
+      <% condutor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.number_field :cpf, id: :condutor_cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :onibus_id %>
+    <%= form.text_field :onibus_id, id: :condutor_onibus_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salario %>
+    <%= form.text_field :salario, id: :condutor_salario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_inicio_serv %>
+    <%= form.date_select :data_inicio_serv, id: :condutor_data_inicio_serv %>
+  </div>
+
+  <div class="field">
+    <%= form.label :datanasc %>
+    <%= form.date_select :datanasc, id: :condutor_datanasc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :empresa_id %>
+    <%= form.text_field :empresa_id, id: :condutor_empresa_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

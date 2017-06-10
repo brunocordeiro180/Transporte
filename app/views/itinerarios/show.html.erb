@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Estacao:</strong>
+  <%= @itinerario.estacao %>
+</p>
+
+<p>
+  <strong>Linha:</strong>
+  <%= @itinerario.linha %>
+</p>
+
+<p>
+  <strong>Ordem:</strong>
+  <%= @itinerario.ordem %>
+</p>
+
+<%= link_to 'Edit', edit_itinerario_path(@itinerario) %> |
+<%= link_to 'Back', itinerarios_path %>

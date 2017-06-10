@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cpf: 1
+  onibus: one
+  salario: 2017-06-09
+  data_inicio_ser: 2017-06-09
+  datanasc: 2017-06-09
+  empresa: one
+
+two:
+  cpf: 1
+  onibus: two
+  salario: 2017-06-09
+  data_inicio_ser: 2017-06-09
+  datanasc: 2017-06-09
+  empresa: two

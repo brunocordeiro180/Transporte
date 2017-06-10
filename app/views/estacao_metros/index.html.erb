@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Estacao Metros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cidade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @estacao_metros.each do |estacao_metro| %>
+      <tr>
+        <td><%= estacao_metro.nome %></td>
+        <td><%= estacao_metro.cidade %></td>
+        <td><%= link_to 'Show', estacao_metro %></td>
+        <td><%= link_to 'Edit', edit_estacao_metro_path(estacao_metro) %></td>
+        <td><%= link_to 'Destroy', estacao_metro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Estacao Metro', new_estacao_metro_path %>

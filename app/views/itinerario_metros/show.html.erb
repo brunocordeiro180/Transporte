@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Estacao metro:</strong>
+  <%= @itinerario_metro.estacao_metro %>
+</p>
+
+<p>
+  <strong>Linha metro:</strong>
+  <%= @itinerario_metro.linha_metro %>
+</p>
+
+<p>
+  <strong>Ordem:</strong>
+  <%= @itinerario_metro.ordem %>
+</p>
+
+<%= link_to 'Edit', edit_itinerario_metro_path(@itinerario_metro) %> |
+<%= link_to 'Back', itinerario_metros_path %>

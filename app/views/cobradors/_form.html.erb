@@ -1,0 +1,47 @@
+<%= form_with(model: cobrador, local: true) do |form| %>
+  <% if cobrador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cobrador.errors.count, "error") %> prohibited this cobrador from being saved:</h2>
+
+      <ul>
+      <% cobrador.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.number_field :cpf, id: :cobrador_cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :onibus_id %>
+    <%= form.text_field :onibus_id, id: :cobrador_onibus_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salario %>
+    <%= form.date_select :salario, id: :cobrador_salario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_inicio_ser %>
+    <%= form.date_select :data_inicio_ser, id: :cobrador_data_inicio_ser %>
+  </div>
+
+  <div class="field">
+    <%= form.label :datanasc %>
+    <%= form.date_select :datanasc, id: :cobrador_datanasc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :empresa_id %>
+    <%= form.text_field :empresa_id, id: :cobrador_empresa_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

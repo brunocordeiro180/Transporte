@@ -1,0 +1,42 @@
+<%= form_with(model: metro, local: true) do |form| %>
+  <% if metro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(metro.errors.count, "error") %> prohibited this metro from being saved:</h2>
+
+      <ul>
+      <% metro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :linha_metro_id %>
+    <%= form.text_field :linha_metro_id, id: :metro_linha_metro_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :empresa_id %>
+    <%= form.text_field :empresa_id, id: :metro_empresa_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qtd_passageiros %>
+    <%= form.number_field :qtd_passageiros, id: :metro_qtd_passageiros %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_inicio_operacao %>
+    <%= form.date_select :data_inicio_operacao, id: :metro_data_inicio_operacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ultima_revisao %>
+    <%= form.date_select :ultima_revisao, id: :metro_ultima_revisao %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

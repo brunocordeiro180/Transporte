@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Linha metro:</strong>
+  <%= @metro.linha_metro %>
+</p>
+
+<p>
+  <strong>Empresa:</strong>
+  <%= @metro.empresa %>
+</p>
+
+<p>
+  <strong>Qtd passageiros:</strong>
+  <%= @metro.qtd_passageiros %>
+</p>
+
+<p>
+  <strong>Data inicio operacao:</strong>
+  <%= @metro.data_inicio_operacao %>
+</p>
+
+<p>
+  <strong>Ultima revisao:</strong>
+  <%= @metro.ultima_revisao %>
+</p>
+
+<%= link_to 'Edit', edit_metro_path(@metro) %> |
+<%= link_to 'Back', metros_path %>

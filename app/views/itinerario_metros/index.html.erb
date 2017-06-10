@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Itinerario Metros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Estacao metro</th>
+      <th>Linha metro</th>
+      <th>Ordem</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @itinerario_metros.each do |itinerario_metro| %>
+      <tr>
+        <td><%= itinerario_metro.estacao_metro %></td>
+        <td><%= itinerario_metro.linha_metro %></td>
+        <td><%= itinerario_metro.ordem %></td>
+        <td><%= link_to 'Show', itinerario_metro %></td>
+        <td><%= link_to 'Edit', edit_itinerario_metro_path(itinerario_metro) %></td>
+        <td><%= link_to 'Destroy', itinerario_metro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Itinerario Metro', new_itinerario_metro_path %>

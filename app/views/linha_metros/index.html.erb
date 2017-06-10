@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Linha Metros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numero paradas</th>
+      <th>Cor</th>
+      <th>Passageiros atendidos</th>
+      <th>Qtd trans</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @linha_metros.each do |linha_metro| %>
+      <tr>
+        <td><%= linha_metro.numero_paradas %></td>
+        <td><%= linha_metro.cor %></td>
+        <td><%= linha_metro.passageiros_atendidos %></td>
+        <td><%= linha_metro.qtd_trans %></td>
+        <td><%= link_to 'Show', linha_metro %></td>
+        <td><%= link_to 'Edit', edit_linha_metro_path(linha_metro) %></td>
+        <td><%= link_to 'Destroy', linha_metro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Linha Metro', new_linha_metro_path %>

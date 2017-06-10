@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  estacao_metro: one
+  linha_metro: one
+  ordem: 1
+
+two:
+  estacao_metro: two
+  linha_metro: two
+  ordem: 1

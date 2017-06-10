@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @cobrador.cpf %>
+</p>
+
+<p>
+  <strong>Onibus:</strong>
+  <%= @cobrador.onibus %>
+</p>
+
+<p>
+  <strong>Salario:</strong>
+  <%= @cobrador.salario %>
+</p>
+
+<p>
+  <strong>Data inicio ser:</strong>
+  <%= @cobrador.data_inicio_ser %>
+</p>
+
+<p>
+  <strong>Datanasc:</strong>
+  <%= @cobrador.datanasc %>
+</p>
+
+<p>
+  <strong>Empresa:</strong>
+  <%= @cobrador.empresa %>
+</p>
+
+<%= link_to 'Edit', edit_cobrador_path(@cobrador) %> |
+<%= link_to 'Back', cobradors_path %>

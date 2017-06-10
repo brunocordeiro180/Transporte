@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  estacao: one
+  linha: one
+  ordem: 1
+
+two:
+  estacao: two
+  linha: two
+  ordem: 1

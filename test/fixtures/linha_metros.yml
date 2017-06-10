@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero_paradas: 1
+  cor: MyString
+  passageiros_atendidos: MyString
+  qtd_trans: MyString
+
+two:
+  numero_paradas: 1
+  cor: MyString
+  passageiros_atendidos: MyString
+  qtd_trans: MyString
