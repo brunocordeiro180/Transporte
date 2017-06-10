@@ -17,8 +17,8 @@
   <tbody>
     <% @metros.each do |metro| %>
       <tr>
-        <td><%= metro.linha_metro %></td>
-        <td><%= metro.empresa %></td>
+        <td><%= metro.linha_metro.id %></td>
+        <td><%= metro.empresa.id %></td>
         <td><%= metro.qtd_passageiros %></td>
         <td><%= metro.data_inicio_operacao %></td>
         <td><%= metro.ultima_revisao %></td>
