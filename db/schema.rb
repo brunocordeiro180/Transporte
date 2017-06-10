@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170610025604) do
+ActiveRecord::Schema.define(version: 20170610185322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,10 +34,9 @@ ActiveRecord::Schema.define(version: 20170610025604) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "cobradors", force: :cascade do |t|
-    t.integer "cpf"
+  create_table "cobradors", primary_key: "cpf", id: :bigint, default: -> { "nextval('cobradors_id_seq'::regclass)" }, force: :cascade do |t|
     t.bigint "onibus_id"
-    t.date "salario"
+    t.float "salario"
     t.date "data_inicio_ser"
     t.date "datanasc"
     t.bigint "empresa_id"
